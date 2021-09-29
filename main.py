@@ -3,6 +3,7 @@ import os
 import pyaudio
 import pyttsx3
 import json
+import core
 
 # Síntese de fala
 engine = pyttsx3.init()
@@ -14,15 +15,18 @@ def speak(text):
     engine.say(text)
     engine.runAndWait()
 
+#Reconhecimento da Fala
+
 model = Model('model')
 rec = KaldiRecognizer(model, 16000)
 
 p = pyaudio.PyAudio()
-stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=8000)
+stream = p.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=2048)
 stream.start_stream()
 
+#Loops do reconhecimento da fala
 while True:
-    data = stream.read(2000)
+    data = stream.read(2048)
     if len(data) == 0:
         break
     if rec.AcceptWaveform(data):
@@ -34,3 +38,6 @@ while True:
 
             print(text)
             speak(text)
+
+            if text == 'que horas são' or text == 'que horas são' or text == 'horas':
+                speak(core.SystemInfo.get_time())
