@@ -20,8 +20,11 @@ Biblioteca
     pip install pipwin
     pipwin install pyaudio
     pip install vosk
+    pip install pyttsx3
     https://alphacephei.com/vosk/
     https://alphacephei.com/vosk/models
+    https://pypi.org/project/pyttsx3/
+    
 
 Sites:
     pypi.org
