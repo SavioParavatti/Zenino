@@ -12,7 +12,7 @@ Receito de Bolo:
     Reconhecimento de Voz: (Google)
     Síntese de Voz
     Cabeção IA
-    IA: Comands, NLU
+    IA: Comands, NLU (classificação de texto)
 
 Biblioteca
     https://pypi.org/project/SpeechRecognition/
