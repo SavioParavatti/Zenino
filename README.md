@@ -12,6 +12,7 @@ Receito de Bolo:
     Reconhecimento de Voz: (Google)
     Síntese de Voz
     Cabeção IA
+    IA: Comands, NLU
 
 Biblioteca
     https://pypi.org/project/SpeechRecognition/
@@ -33,4 +34,6 @@ Sites:
 Ambiente:
 python install virtualenv
 ativar Ambiente: /venv/Scripts/activate.bat
+
+YouTube: https://www.youtube.com/watch?v=HJuhrBm8AC8
 
